@@ -1,0 +1,73 @@
+<div class="spacing-top"></div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-7">
+      <h1>
+        Contact us
+      </h1>
+      <p>
+        Ye to misery wisdom plenty polite to as. Prepared interest proposal it he exercise. My wishing an in attempt ferrars. Visited eat you why service looking engaged. At place no walls hopes rooms fully in. Roof hope shy tore leaf joy paid boy. Noisier out brought entered detract because sitting sir. Fat put occasion rendered off humanity has
+      </p>
+
+      <%= form_for @contact, url: {controller: 'contacts', action: 'create'} do |f| %>
+        <div class="form-row">
+          <div class="form-group col">
+            <label> Name </label>
+            <%= f.text_field :name, class: 'form-control', minlength: '3' %>
+          </div>
+          <div class="form-group col">
+            <label> Email </label>
+            <%= f.text_field :email, class: 'form-control' %>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col">
+            <label> Comment </label>
+            <%= f.text_area :comment, class: 'form-control', minlength: '10' %>
+          </div>
+        </div>
+        <%= f.submit 'Submit', class: 'btn btn-primary' %>
+      <% end %>
+    </div>
+
+    <div class="col-md-5">
+      <div class="contact-header">
+        Email
+      </div>
+      <div class="contact-content">
+        info@gmail.com
+      </div>
+      
+      <br>
+      <div class="contact-header">
+        Telephone
+      </div>
+      <div class="contact-content">
+        +23 1234 56 7
+      </div>
+      
+      <br>
+
+      <div class="contact-header">
+        Skype
+      </div>
+      
+      <div class="contact-content">
+        abc  
+      </div>
+
+      <br>
+
+      <div class="contact-header">
+        Address
+      </div>
+      
+      <div class="contact-content">
+        123 ABC </br>
+        456 DEF </br>
+        UK      </br>
+      </div>
+    </div>
+  </div>
+</div>

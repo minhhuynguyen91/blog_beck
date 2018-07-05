@@ -1,0 +1,9 @@
+<% if flash[:notice] %>
+  <script type="text/javascript">
+    swal (
+    "Contact",
+    "<%= flash[:notice] %>",
+    "success"
+    );
+  </script>
+<% end %>
